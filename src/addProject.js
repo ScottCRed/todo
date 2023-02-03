@@ -1,5 +1,5 @@
 import './style.css';
 
-export function testFunc () {
+export function addProject () {
     console.log('it works bih')
 }
