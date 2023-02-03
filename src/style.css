@@ -1,3 +1,45 @@
-.testDiv {
-    color: pink;
+:root {
+    --primary-main: rgb(255, 0, 0);
+    --secondary-main: gray;
+    --primary-sub: green;
+    --secondary-sub: blue;
+}
+
+body {
+    height:950px;
+    margin: 0;
+}
+
+.header {
+    background-color: var(--primary-main);
+    height: 100px;
+    font-size: 70px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.content {
+    display: flex
+}
+
+.sumBar{
+    background-color: var(--secondary-main);
+    height: 750px;
+    width: 400px;
+    font-size: 40px;
+}
+
+.mainDisplay {
+    background-color: var(--primary-sub);
+    height: 750px;
+    width: 100%;
+}
+
+.footer {
+    display: flex;
+    background-color: var(--secondary-sub);
+    height: 100px;
+    font-size: 20px;
+    text-align: center;
+    
 }
