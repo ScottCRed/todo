@@ -24,6 +24,7 @@ Functionality:
 - When add item button is clicked a form is presented which asks for the following information: item title, basic description, due date (calendar selector??), priority level(dropdown selection form item)
 - The displayed project item should display all the requested information as well as a toggle button to indicate when an item is complete. When this button is toggled the itme is greyed out
 - sort items by priority level?
+- project items grayed out when all tasks are completed?
 
 Modules:
 - Project create
