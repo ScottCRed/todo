@@ -41,4 +41,14 @@ function renderProjects () {
         }
 }
 
-export { addProject, submitProject }
+function removeProject (event) {
+    const button = document.querySelector('button');
+    if (button.classList.contains('remove') === true) {
+    console.log('delete')
+    } else {
+        console.log('nope')
+    }
+};
+
+
+export { addProject, submitProject, removeProject}
