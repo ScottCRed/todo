@@ -10,7 +10,25 @@
   </head>
   
 </body>
-    <div class="header">Project Dashboard</div>
+<div class = 'addTask'>
+    <form id="form" action="">
+        <legend>Add a New Task</legend>
+        <div id="textInput">
+            <p><input type="text" id="title" name="title" placeholder="Title"></p>
+            <p><label>Description:</label>
+            <textarea id="description" name="description"></textarea>
+            </p>
+            <p><label>Due Date:</label>
+                <input type="date" id="date" name="date">
+            </p>
+                <div class="form-buttons">
+                    <button type="submit" class="submit-button">Add task</button>
+            </div>
+        </div>
+    </form>
+</div>    
+
+<div class="header">Project Dashboard</div>
     
     <div class="content">
         <div class="sumBar">
@@ -21,7 +39,7 @@
     
         <div class="mainDisplay">
             <h2> Project Title</h2>
-            <div class="taskAdd">
+            <div class="taskAddButton">
                 Task title <br>
                 Description <br>
                 Due Date <br>
