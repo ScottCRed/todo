@@ -16,5 +16,3 @@ submitP.addEventListener('click', submitProject);
 const submitT = document.querySelector('.submit-button-t');
 submitT.addEventListener('click', submitTask);
 
-console.log('ya bith')
-
