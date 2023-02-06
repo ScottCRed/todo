@@ -7,7 +7,6 @@ function addProject () {
     const addP = document.querySelector('.addProject');
     addP.classList.add('formAppear');
     document.getElementById('projectForm').reset();
-    console.log('it works bih')
 }
 
 function submitProject () {
@@ -17,8 +16,6 @@ function submitProject () {
 
     const title = projectForm.projectTitle.value;
     projects.push(title);
-    console.log(title);
-    console.log(projects);
 
     renderProjects();
 }
@@ -34,8 +31,12 @@ function renderProjects () {
         projectItem.setAttribute('id', projects.indexOf(i));
         projectItem.classList.add('projectItem');
         projectItem.textContent = projects[i];
-        
-    
+
+        const deleteButton = document.createElement('button');
+        deleteButton.classList.add('remove');
+        deleteButton.textContent = 'X';
+
+        projectItem.appendChild(deleteButton)
         projectContainer.appendChild(projectItem)
         }
 }

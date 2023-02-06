@@ -69,6 +69,8 @@ h2 {
 }
 
 .projectItem, .projectAdd {
+    display: flex;
+    justify-content: space-between;
     margin: 15px 5px;
     padding: 5px;
     font-size: 20px;
@@ -84,6 +86,12 @@ h2 {
     width: 150px;
     border: 1px solid black;
     border-radius: 5px;
+}
+
+.remove, .addPButton {
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: var(--primary-sub);
 }
 
 .footer {
