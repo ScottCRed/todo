@@ -35,6 +35,10 @@ body {
     color: aliceblue;
 }
 
+.addProject {
+    z-index: 2;
+}
+
 .formAppear {
     visibility: visible;
 }
