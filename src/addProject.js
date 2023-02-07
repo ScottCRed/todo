@@ -46,9 +46,6 @@ function renderProjects (item) {
         };
 };
 
-function projectItem () {
-
-}
 
 
 export { addProject, submitProject }
