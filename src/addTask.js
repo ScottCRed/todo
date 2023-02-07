@@ -28,7 +28,35 @@ function submitTask () {
 }
 
 function renderTasks () {
+    const taskContainer = document.querySelector('.taskContainer');
+    taskContainer.innerHTML = ''   
 
+    for (let i = 0; i< tasks.length; i++) {
+        taskItem(tasks[i])
+    };
+}
+
+function taskItem (item) {
+    const taskContainer = document.querySelector('.taskContainer');
+    const taskBox = document.createElement('div');
+    taskBox.classList.add('taskBox');
+    taskContainer.appendChild(taskBox);
+
+    const taskTitle = document.createElement('div');
+    taskTitle.textContent = 'Task: '+ item.taskTitle
+    taskBox.appendChild(taskTitle)
+
+    const taskDescrip = document.createElement('div');
+    taskDescrip.textContent = 'Description: ' + item.description;
+    taskBox.appendChild(taskDescrip);
+
+    //const taskDate = document.createElement('div');
+    //taskDate.textContent = 'Due: ' + item.
+    //taskBox.appendChild(taskDate);
+
+    //const taskPriority = document.createElement('div');
+    //taskPriority.textContent = 'Priority: ' + item.
+    //taskBox.appendChild(taskPriority);
 }
 
 export {tasks, addTask, submitTask}
