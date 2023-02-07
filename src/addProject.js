@@ -37,7 +37,7 @@ function renderProjects (item) {
         deleteButton.textContent = 'X';
 
         deleteButton.addEventListener('click', () => { 
-            projects.splice(projects.indexOf(item),1);
+            projects.splice(projects.indexOf(projects[i]),1);
             renderProjects();
           });
 
