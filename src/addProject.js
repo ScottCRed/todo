@@ -28,7 +28,7 @@ function renderProjects (item) {
 
         const projectContainer = document.querySelector('.projectContainer');
         const projectItem = document.createElement('div');
-        //projectItem.setAttribute('id', indexOf(projects(i)));
+        projectItem.setAttribute('id', indexOf(projects(i)));
         projectItem.classList.add('projectItem');
         projectItem.textContent = projects[i];
 

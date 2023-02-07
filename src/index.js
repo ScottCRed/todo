@@ -5,7 +5,7 @@ import { submitTask } from "./addTask";
 //import { removeProject } from "./addProject";
 import './style.css'
 
-const addT = document.querySelector('.taskAddButton');
+const addT = document.querySelector('.taskAdd');
 addT.addEventListener('click', addTask);
 
 const addP = document.querySelector('.projectAdd');
