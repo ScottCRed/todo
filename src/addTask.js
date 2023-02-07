@@ -2,9 +2,11 @@
 let tasks = [];
 
 class Task{
-    constructor(taskTitle, description) {
+    constructor(taskTitle, description, dueDate) {
     this.taskTitle = taskForm.taskTitle.value;
     this.description = taskForm.description.value;
+    this.dueDate = taskForm.dueDate.value;
+    this.priority = taskForm.priority.value;
     }
   }
 
@@ -50,13 +52,13 @@ function taskItem (item) {
     taskDescrip.textContent = 'Description: ' + item.description;
     taskBox.appendChild(taskDescrip);
 
-    //const taskDate = document.createElement('div');
-    //taskDate.textContent = 'Due: ' + item.
-    //taskBox.appendChild(taskDate);
+    const taskDate = document.createElement('div');
+    taskDate.textContent = 'Due: ' + item.dueDate
+    taskBox.appendChild(taskDate);
 
-    //const taskPriority = document.createElement('div');
-    //taskPriority.textContent = 'Priority: ' + item.
-    //taskBox.appendChild(taskPriority);
+    const taskPriority = document.createElement('div');
+    taskPriority.textContent = 'Priority: ' + item.priority
+    taskBox.appendChild(taskPriority);
 }
 
 export {tasks, addTask, submitTask}
