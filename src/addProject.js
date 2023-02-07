@@ -20,7 +20,7 @@ function submitProject () {
     renderProjects();
 };
 
-function renderProjects () {
+function renderProjects (item) {
     const projectContainer = document.querySelector('.projectContainer');
     projectContainer.innerHTML = ''   
 
@@ -28,6 +28,7 @@ function renderProjects () {
 
         const projectContainer = document.querySelector('.projectContainer');
         const projectItem = document.createElement('div');
+        //projectItem.setAttribute('id', indexOf(projects(i)));
         projectItem.classList.add('projectItem');
         projectItem.textContent = projects[i];
 
@@ -35,14 +36,19 @@ function renderProjects () {
         deleteButton.classList.add('remove');
         deleteButton.textContent = 'X';
 
+        deleteButton.addEventListener('click', () => { 
+            projects.splice(projects.indexOf(item),1);
+            renderProjects();
+          });
+
         projectItem.appendChild(deleteButton)
         projectContainer.appendChild(projectItem)
         };
 };
 
-//function removeProject () {
-//    console.log('true')
-//};
+function projectItem () {
+
+}
 
 
 export { addProject, submitProject }
