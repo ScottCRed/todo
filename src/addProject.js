@@ -7,7 +7,7 @@ function addProject () {
     const addP = document.querySelector('.addProject');
     addP.classList.add('formAppear');
     document.getElementById('projectForm').reset();
-}
+};
 
 function submitProject () {
     event.preventDefault();
@@ -18,7 +18,7 @@ function submitProject () {
     projects.push(title);
 
     renderProjects();
-}
+};
 
 function renderProjects () {
     const projectContainer = document.querySelector('.projectContainer');
@@ -28,7 +28,6 @@ function renderProjects () {
 
         const projectContainer = document.querySelector('.projectContainer');
         const projectItem = document.createElement('div');
-        projectItem.setAttribute('id', projects.indexOf(i));
         projectItem.classList.add('projectItem');
         projectItem.textContent = projects[i];
 
@@ -38,17 +37,12 @@ function renderProjects () {
 
         projectItem.appendChild(deleteButton)
         projectContainer.appendChild(projectItem)
-        }
-}
-
-function removeProject (event) {
-    const button = document.querySelector('button');
-    if (button.classList.contains('remove') === true) {
-    console.log('delete')
-    } else {
-        console.log('nope')
-    }
+        };
 };
 
+//function removeProject () {
+//    console.log('true')
+//};
 
-export { addProject, submitProject, removeProject}
+
+export { addProject, submitProject }
