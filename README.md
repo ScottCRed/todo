@@ -32,3 +32,4 @@ Modules:
 
 Next:
 - Try Create new array on creation of new project (in the for loop) named projectForm.projectTitle.value and import to addTask to seperate each 'list' of tasks????
+    >> for loop let projects[i] = []

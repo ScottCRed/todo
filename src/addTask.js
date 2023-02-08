@@ -1,3 +1,4 @@
+import { projects } from "./addProject";
 
 let tasks = [];
 
@@ -25,6 +26,7 @@ function submitTask () {
     const newTask = new Task(this.taskTitle, this.description, this.dueDate, this.priority);
     tasks.push(newTask);
     console.log(tasks);
+    console.log(projectForm.projectTitle.value);
 
     renderTasks();
 }

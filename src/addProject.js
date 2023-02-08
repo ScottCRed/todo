@@ -47,4 +47,4 @@ function renderProjects (item) {
 
 
 
-export { addProject, submitProject }
+export { addProject, submitProject, projects }
