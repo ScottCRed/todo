@@ -101,6 +101,10 @@ h2 {
     border-radius: 5px;
 }
 
+.taskBox {
+    align-items:flex-start ;
+}
+
 .taskAddButton {
     border: 1px solid black;
     border-radius: 50%;

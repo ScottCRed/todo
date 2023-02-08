@@ -22,7 +22,7 @@ function submitTask () {
     const addT = document.querySelector('.addTask');
     addT.classList.remove('formAppear'); 
 
-    const newTask = new Task(this.taskTitle, this.description);
+    const newTask = new Task(this.taskTitle, this.description, this.dueDate, this.priority);
     tasks.push(newTask);
     console.log(tasks);
 
