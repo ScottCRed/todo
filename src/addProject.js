@@ -1,7 +1,7 @@
 import './style.css';
 
 let projects = [];
-
+let projectIndex = document.getElementsByClassName('projectItem').id
 
 function addProject () {
     const addP = document.querySelector('.addProject');
@@ -27,7 +27,7 @@ function renderProjects (item) {
     for (let i = 0; i< projects.length; i++) {
 
         const projectItem = document.createElement('div');
-        //projectItem.setAttribute('id', indexOf(projects(i)));
+        projectItem.setAttribute('id', i);
         projectItem.classList.add('projectItem');
         projectItem.textContent = projects[i];
 
@@ -40,11 +40,13 @@ function renderProjects (item) {
             renderProjects();
           });
 
-        projectItem.appendChild(deleteButton)
-        projectContainer.appendChild(projectItem)
-        };
+        projectItem.appendChild(deleteButton);
+        projectContainer.appendChild(projectItem);
+
+    };
+
 };
 
 
 
-export { addProject, submitProject, projects }
+export { addProject, submitProject, projects, projectIndex }
