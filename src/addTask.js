@@ -1,6 +1,8 @@
 import { projects } from "./addProject";
 
 let tasks = [];
+let taskArray = [];
+let projectIndex;
 
 class Task{
     constructor(taskTitle, description, dueDate) {

@@ -32,4 +32,9 @@ Modules:
 
 Next:
 - Try Create new array on creation of new project (in the for loop) named projectForm.projectTitle.value and import to addTask to seperate each 'list' of tasks????
-    >> for loop let projects[i] = []
+    >> When a new project is created a new tasks object is created which is tied to project element id or project array index
+    >> Push tasks class to a new array taskArray (it's fine if they all have the same name they will be identified by their index in the array)
+    >> when a new project is created or an alternative project is clicked let tasks = []; << empty the object as the old one has been pushed to the taskArray
+    >> When project variables are clicked return either project index from array or projectItem element id
+    >> fetch the corresponding tasks[i] from taskArray
+    >> render corresponding tasks[i]
