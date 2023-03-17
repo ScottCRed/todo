@@ -28,6 +28,7 @@ function submitProject () {
     //const newProject = new Project(this.projectTitle, this.taskArray);
     project.push(projectForm.projectTitle.value, tasks);
     projects.push(project);
+    project = [];
     console.log(projects);
 
     projectIndex++;
