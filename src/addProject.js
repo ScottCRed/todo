@@ -1,7 +1,7 @@
 import './style.css';
 
 let projects = [];
-let projectIndex = document.getElementsByClassName('projectItem').id
+let projectIndex = 0;
 
 function addProject () {
     const addP = document.querySelector('.addProject');
@@ -12,12 +12,14 @@ function addProject () {
 function submitProject () {
     event.preventDefault();
     const addP = document.querySelector('.addProject');
+    addP.setAttribute('id', projectIndex)
     addP.classList.remove('formAppear');
 
     const title = projectForm.projectTitle.value;
     projects.push(title);
 
-    renderProjects();
+    projectIndex++;
+    renderProjects();    
 };
 
 function renderProjects (item) {

@@ -1,9 +1,9 @@
-import { addProject } from "./addProject"
-import { addTask } from "./addTask"
+import { addProject } from "./addProject";
+import { addTask } from "./addTask";
 import { submitProject } from "./addProject";
 import { submitTask } from "./addTask";
 //import { removeProject } from "./addProject";
-import './style.css'
+import './style.css';
 
 const addT = document.querySelector('.taskAdd');
 addT.addEventListener('click', addTask);
