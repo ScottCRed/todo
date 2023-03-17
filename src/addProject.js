@@ -1,6 +1,8 @@
+import { renderTasks, tasks } from './addTask';
 import './style.css';
 
 let projects = [];
+let project = [];
 let projectIndex = 0;
 
 function addProject () {
@@ -19,8 +21,18 @@ function submitProject () {
     projects.push(title);
 
     projectIndex++;
-    renderProjects();    
+    renderProjects();
+       
 };
+
+function projectDisplay (e, title) {
+    project.push([title, tasks]);
+    projects.push(project);
+    console.log(projects);
+
+    //let renderIndex = projects.indexOf(e);
+    //renderTasks(renderIndex[1]);
+}
 
 function renderProjects (item) {
     const projectContainer = document.querySelector('.projectContainer');
@@ -51,4 +63,4 @@ function renderProjects (item) {
 
 
 
-export { addProject, submitProject, projects, projectIndex }
+export { addProject, submitProject, projects, projectIndex, projectDisplay }

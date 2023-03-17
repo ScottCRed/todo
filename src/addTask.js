@@ -1,7 +1,6 @@
 import { projects } from "./addProject";
 
 let tasks = [];
-let taskArray = [];
 let projectIndex;
 
 class Task{
@@ -65,4 +64,4 @@ function taskItem (item) {
     taskBox.appendChild(taskPriority);
 }
 
-export {tasks, addTask, submitTask}
+export {tasks, addTask, submitTask, renderTasks}

@@ -1,4 +1,4 @@
-import { addProject } from "./addProject";
+import { addProject, projectDisplay } from "./addProject";
 import { addTask } from "./addTask";
 import { submitProject } from "./addProject";
 import { submitTask } from "./addTask";
@@ -16,6 +16,9 @@ submitP.addEventListener('click', submitProject);
 
 const submitT = document.querySelector('.submit-button-t');
 submitT.addEventListener('click', submitTask);
+
+const pSelect = document.querySelector('.projectItem');
+pSelect.addEventListener('click', projectDisplay);
 
 
 
