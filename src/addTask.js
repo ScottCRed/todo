@@ -64,14 +64,5 @@ function taskItem (item) {
     taskBox.appendChild(taskPriority);
 }
 
-// function projectHead () {
-//     const projectHead = document.querySelector('.projectHead');
-//     const heading = document.createElement('h2');
-//     heading.textContent = projects[0][0];
-//     projectHead.appendChild(heading);
-
-// }
-
-// projectHead();
 
 export {tasks, addTask, submitTask, renderTasks}

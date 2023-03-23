@@ -5,12 +5,6 @@ let projects = [['Default Project']];
 let project = [];
 let projectIndex = 0;
 
-// class Project {
-//     constructor(projectTitle, taskArray) {
-//         this.projectTitle = projectForm.projectTitle.value;
-//         this.taskArray = tasks;
-//     }
-// }
 
 function addProject () {
     const addP = document.querySelector('.addProject');
@@ -24,8 +18,6 @@ function submitProject () {
     addP.setAttribute('id', projectIndex)
     addP.classList.remove('formAppear');
 
-    //const title = [projectForm.projectTitle.value];
-    //const newProject = new Project(this.projectTitle, this.taskArray);
     project.push(projectForm.projectTitle.value, tasks);
     projects.push(project);
     project = [];
@@ -42,9 +34,6 @@ function projectDisplay (e, title) {
 
     projects.push(projectIndex);
     console.log(projects);
-
-    //let renderIndex = projects.indexOf(e);
-    //renderTasks(renderIndex[1]);
 }
 
 function renderProjects (item) {
@@ -90,4 +79,4 @@ projectHead();
 renderProjects()
 
 
-export { addProject, submitProject, projects, projectIndex, projectDisplay }
+export { addProject, submitProject, projects, projectIndex}
