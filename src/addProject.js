@@ -1,7 +1,7 @@
 import { renderTasks, tasks } from './addTask';
 import './style.css';
 
-let projects = [];
+let projects = [['Default Project']];
 let project = [];
 let projectIndex = 0;
 
@@ -71,9 +71,9 @@ function renderProjects (item) {
         projectContainer.appendChild(projectItem);
 
     };
-
+    
 };
-
+renderProjects()
 
 
 export { addProject, submitProject, projects, projectIndex, projectDisplay }
