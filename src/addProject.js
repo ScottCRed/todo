@@ -57,11 +57,12 @@ function renderProjects (item) {
         projectItem.setAttribute('id', i);
         projectItem.classList.add('projectItem');
         projectItem.textContent = projects[i][0];
+        projectItem.addEventListener('click', changeIndex);
+        projectItem.addEventListener('click', projectHead);
 
         const deleteButton = document.createElement('button');
         deleteButton.classList.add('remove');
         deleteButton.textContent = 'X';
-
         deleteButton.addEventListener('click', () => { 
             projects.splice(projects.indexOf(projects[i]),1);
             renderProjects();
@@ -69,10 +70,23 @@ function renderProjects (item) {
 
         projectItem.appendChild(deleteButton);
         projectContainer.appendChild(projectItem);
-
-    };
-    
+    };  
 };
+
+function changeIndex(event) {
+    projectIndex = event.target.id;
+    console.log(projectIndex);
+    console.log(projects);
+    return projectIndex;
+};
+
+function projectHead () {
+    const projectHead = document.querySelector('.projectHead');
+    projectHead.textContent = projects[projectIndex][0];
+}
+
+projectHead();
+
 renderProjects()
 
 
