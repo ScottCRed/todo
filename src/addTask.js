@@ -34,7 +34,7 @@ function submitTask () {
 
 function renderTasks () {
     const taskContainer = document.querySelector('.taskContainer');
-    taskContainer.innerHTML = ''   
+    taskContainer.innerHTML = '';   
 
     for (let i = 0; i< tasks.length; i++) {
         taskItem(tasks[i])
@@ -63,5 +63,15 @@ function taskItem (item) {
     taskPriority.textContent = 'Priority: ' + item.priority
     taskBox.appendChild(taskPriority);
 }
+
+function projectHead () {
+    const projectHead = document.querySelector('.projectHead');
+    const heading = document.createElement('h2');
+    heading.textContent = 'Default Project';
+    projectHead.appendChild(heading);
+
+}
+
+projectHead();
 
 export {tasks, addTask, submitTask, renderTasks}

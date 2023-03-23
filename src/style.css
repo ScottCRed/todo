@@ -68,7 +68,7 @@ body {
     width: 100%;
 }
 
-h2 {
+h2, .projectHead {
     font-size: 40px;
     font-weight: 300;
     text-shadow: 1px 1px rgb(138, 137, 137);
