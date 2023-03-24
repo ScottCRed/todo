@@ -47,7 +47,7 @@ function renderProjects (item) {
         projectItem.classList.add('projectItem');
         projectItem.textContent = projects[i][0];
         projectItem.addEventListener('click', changeIndex);
-        projectItem.addEventListener('click', projectHead);
+        projectItem.addEventListener('click', renderProjectTasks);
 
         const deleteButton = document.createElement('button');
         deleteButton.classList.add('remove');
@@ -69,12 +69,12 @@ function changeIndex(event) {
     return projectIndex;
 };
 
-function projectHead () {
+function renderProjectTasks () {
     const projectHead = document.querySelector('.projectHead');
     projectHead.textContent = projects[projectIndex][0];
 }
 
-projectHead();
+renderProjectTasks();
 
 renderProjects()
 
