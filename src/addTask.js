@@ -1,7 +1,6 @@
-import { projects } from "./addProject";
+import { projects, project, projectIndex } from "./addProject";
 
 let tasks = [];
-let projectIndex;
 
 class Task{
     constructor(taskTitle, description, dueDate) {
@@ -30,6 +29,12 @@ function submitTask () {
     console.log(projectForm.projectTitle.value);
 
     renderTasks();
+}
+
+function pushTasks () {
+    let index = projects[projectIndex];
+    index.push(tasks);
+    tasks = [];
 }
 
 function renderTasks () {
@@ -65,4 +70,4 @@ function taskItem (item) {
 }
 
 
-export {tasks, addTask, submitTask, renderTasks}
+export {tasks, addTask, submitTask, pushTasks}

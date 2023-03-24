@@ -1,7 +1,7 @@
-import { renderTasks, tasks } from './addTask';
+import { pushTasks, renderTasks, tasks } from './addTask';
 import './style.css';
 
-let projects = [['Default Project']];
+let projects = [['Default Project'], ['Default Proj',]];
 let project = [];
 let projectIndex = 0;
 
@@ -18,7 +18,7 @@ function submitProject () {
     addP.setAttribute('id', projectIndex)
     addP.classList.remove('formAppear');
 
-    project.push(projectForm.projectTitle.value, tasks);
+    project.push(projectForm.projectTitle.value);
     projects.push(project);
     project = [];
     console.log(projects);
@@ -46,6 +46,7 @@ function renderProjects (item) {
         projectItem.setAttribute('id', i);
         projectItem.classList.add('projectItem');
         projectItem.textContent = projects[i][0];
+        projectItem.addEventListener('click', pushTasks);
         projectItem.addEventListener('click', changeIndex);
         projectItem.addEventListener('click', renderProjectTasks);
 
@@ -76,7 +77,9 @@ function renderProjectTasks () {
 
 renderProjectTasks();
 
-renderProjects()
+renderProjects();
+
+console.log(projects);
 
 
-export { addProject, submitProject, projects, projectIndex}
+export { addProject, submitProject, projects, projectIndex, project}
