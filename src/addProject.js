@@ -56,7 +56,6 @@ function renderProjects (item) {
 
 function changeIndex(event) {
     projectIndex = event.target.id;
-    console.log(projectIndex);
     console.log(projects);
     return projectIndex;
 };

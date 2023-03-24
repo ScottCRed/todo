@@ -24,14 +24,15 @@ function submitTask () {
     addT.classList.remove('formAppear'); 
 
     const newTask = new Task(this.taskTitle, this.description, this.dueDate, this.priority);
-    tasks.push(newTask);
+    //tasks.push(newTask);
     
+    pushTasks(newTask);
     renderTasks();
 }
 
-function pushTasks () {
+function pushTasks (item) {
     let index = projects[projectIndex];
-    index.push(tasks);
+    index.push(item);
     tasks = [];
 }
 
@@ -41,8 +42,8 @@ function renderTasks () {
     let result = projects[projectIndex]
     console.log(result);
 
-    for (let i = 0; i< tasks.length; i++) {
-        taskItem(tasks[i])
+    for (let i = 1; i< result.length; i++) {
+        taskItem(result[i])
     };
 }
 
