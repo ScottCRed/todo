@@ -18,23 +18,13 @@ function submitProject () {
     addP.setAttribute('id', projectIndex)
     addP.classList.remove('formAppear');
 
-    project.push(projectForm.projectTitle.value);
+    let project = [projectForm.projectTitle.value]
     projects.push(project);
-    project = [];
-    console.log(projects);
 
     projectIndex++;
     renderProjects();
-       
 };
 
-function projectDisplay (e, title) {
-    //project.push([title, tasks]);
-    //projects.push(project);
-
-    projects.push(projectIndex);
-    console.log(projects);
-}
 
 function renderProjects (item) {
     const projectContainer = document.querySelector('.projectContainer');
@@ -49,6 +39,7 @@ function renderProjects (item) {
         projectItem.addEventListener('click', pushTasks);
         projectItem.addEventListener('click', changeIndex);
         projectItem.addEventListener('click', renderProjectTasks);
+        projectItem.addEventListener('click', renderTasks);
 
         const deleteButton = document.createElement('button');
         deleteButton.classList.add('remove');

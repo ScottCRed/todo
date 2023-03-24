@@ -25,9 +25,7 @@ function submitTask () {
 
     const newTask = new Task(this.taskTitle, this.description, this.dueDate, this.priority);
     tasks.push(newTask);
-    console.log(tasks);
-    console.log(projectForm.projectTitle.value);
-
+    
     renderTasks();
 }
 
@@ -40,6 +38,8 @@ function pushTasks () {
 function renderTasks () {
     const taskContainer = document.querySelector('.taskContainer');
     taskContainer.innerHTML = '';   
+    let result = projects[projectIndex]
+    console.log(result);
 
     for (let i = 0; i< tasks.length; i++) {
         taskItem(tasks[i])
@@ -53,15 +53,15 @@ function taskItem (item) {
     taskContainer.appendChild(taskBox);
 
     const taskTitle = document.createElement('div');
-    taskTitle.textContent = 'Task: '+ item.taskTitle
-    taskBox.appendChild(taskTitle)
+    taskTitle.textContent = 'Task: '+ item.taskTitle;
+    taskBox.appendChild(taskTitle);
 
     const taskDescrip = document.createElement('div');
     taskDescrip.textContent = 'Description: ' + item.description;
     taskBox.appendChild(taskDescrip);
 
     const taskDate = document.createElement('div');
-    taskDate.textContent = 'Due: ' + item.dueDate
+    taskDate.textContent = 'Due: ' + item.dueDate;
     taskBox.appendChild(taskDate);
 
     const taskPriority = document.createElement('div');
@@ -70,4 +70,4 @@ function taskItem (item) {
 }
 
 
-export {tasks, addTask, submitTask, pushTasks}
+export {tasks, addTask, submitTask, pushTasks, renderTasks}
