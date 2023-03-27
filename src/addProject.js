@@ -73,7 +73,4 @@ renderProjectHead();
 
 renderProjects();
 
-console.log(projects);
-
-
 export { addProject, submitProject, projects, projectIndex, project}
