@@ -30,12 +30,6 @@ function submitTask () {
     renderTasks();
 }
 
-function pushTasks (item) {
-    let index = projects[projectIndex];
-    index.push(item);
-    tasks = [];
-}
-
 function renderTasks () {
     const taskContainer = document.querySelector('.taskContainer');
     taskContainer.innerHTML = '';   
@@ -70,5 +64,15 @@ function taskItem (item) {
     taskBox.appendChild(taskPriority);
 }
 
+function pushTasks (item) {
+    let index = projects[projectIndex];
+    if (item instanceof PointerEvent) {
+        console.log('hi')
+    }
+    else {
+    index.push(item);
+    }
+    tasks = [];
+}
 
 export {tasks, addTask, submitTask, pushTasks, renderTasks}
