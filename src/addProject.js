@@ -18,6 +18,9 @@ function submitProject () {
     addP.setAttribute('id', projectIndex)
     addP.classList.remove('formAppear');
 
+    const taskContainer = document.querySelector('.taskContainer');
+    taskContainer.innerHTML = ''; 
+
     let project = [projectForm.projectTitle.value]
     projects.push(project);
 

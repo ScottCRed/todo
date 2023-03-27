@@ -24,7 +24,6 @@ function submitTask () {
     addT.classList.remove('formAppear'); 
 
     const newTask = new Task(this.taskTitle, this.description, this.dueDate, this.priority);
-    //tasks.push(newTask);
     
     pushTasks(newTask);
     renderTasks();
@@ -62,6 +61,32 @@ function taskItem (item) {
     const taskPriority = document.createElement('div');
     taskPriority.textContent = 'Priority: ' + item.priority
     taskBox.appendChild(taskPriority);
+
+    const complete = document.createElement('button');
+    taskBox.appendChild(complete);
+    item.complete = false
+
+    if(item.complete===false) {
+        complete.textContent = 'Not Complete'
+        complete.style.backgroundColor = 'Red'
+    } else {
+        complete.textContent = 'Complete'
+        complete.style.backgroundColor = 'Green'
+    }
+
+    complete.addEventListener('click', () => {
+        if(item.complete===false) {
+            item.complete = true;
+            complete.textContent = 'Complete';
+            complete.style.backgroundColor = 'Green';
+            taskBox.style.color = 'Grey'
+        }else {
+            item.complete = false;
+            complete.textContent = 'Not Complete';
+            complete.style.backgroundColor = 'Red';
+            taskBox.style.color = 'Black'
+        }
+    })
 }
 
 function pushTasks (item) {
