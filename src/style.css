@@ -87,6 +87,18 @@ h2, .projectHead {
     border-radius: 5px;
 }
 
+.projectItem:hover {
+    background-color: var(--secondary-main);
+    box-shadow: 1px 1px rgb(0, 0, 0);;
+}
+
+.taskContainer {
+    display: flex;
+    flex-direction: row;
+    
+    flex-wrap: wrap;
+}
+
 .taskBox, .taskAdd {
     display: flex;
     flex-direction: column;
