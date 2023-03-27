@@ -1,7 +1,7 @@
 import { pushTasks, renderTasks, tasks } from './addTask';
 import './style.css';
 
-let projects = [['Default Project'], ['Default Proj',]];
+let projects = [['Default Project']];
 let project = [];
 let projectIndex = 0;
 
@@ -22,6 +22,7 @@ function submitProject () {
     projects.push(project);
 
     projectIndex++;
+    renderProjectHead();
     renderProjects();
 };
 
@@ -38,7 +39,7 @@ function renderProjects (item) {
         projectItem.textContent = projects[i][0];
         projectItem.addEventListener('click', pushTasks);
         projectItem.addEventListener('click', changeIndex);
-        projectItem.addEventListener('click', renderProjectTasks);
+        projectItem.addEventListener('click', renderProjectHead);
         projectItem.addEventListener('click', renderTasks);
 
         const deleteButton = document.createElement('button');
@@ -60,12 +61,12 @@ function changeIndex(event) {
     return projectIndex;
 };
 
-function renderProjectTasks () {
+function renderProjectHead () {
     const projectHead = document.querySelector('.projectHead');
     projectHead.textContent = projects[projectIndex][0];
 }
 
-renderProjectTasks();
+renderProjectHead();
 
 renderProjects();
 
