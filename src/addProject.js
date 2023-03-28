@@ -1,4 +1,4 @@
-import { pushTasks, renderTasks, tasks } from './addTask';
+import { pushTasks, renderTasks} from './addTask';
 import './style.css';
 
 let projects = [['Default Project']];
@@ -60,7 +60,6 @@ function renderProjects (item) {
 
 function changeIndex(event) {
     projectIndex = event.target.id;
-    console.log(projects);
     return projectIndex;
 };
 
@@ -73,4 +72,4 @@ renderProjectHead();
 
 renderProjects();
 
-export { addProject, submitProject, projects, projectIndex, project}
+export { addProject, submitProject, projects, projectIndex}

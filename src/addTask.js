@@ -1,4 +1,4 @@
-import { projects, project, projectIndex } from "./addProject";
+import { projects, projectIndex } from "./addProject";
 
 let tasks = [];
 
@@ -15,7 +15,6 @@ function addTask () {
     const addP = document.querySelector('.addTask');
     addP.classList.add('formAppear');
     document.getElementById('taskForm').reset();
-    console.log('task baby')
 }
 
 function submitTask () {
@@ -33,7 +32,6 @@ function renderTasks () {
     const taskContainer = document.querySelector('.taskContainer');
     taskContainer.innerHTML = '';   
     let result = projects[projectIndex]
-    console.log(result);
 
     for (let i = 1; i< result.length; i++) {
         taskItem(result[i])
@@ -92,7 +90,6 @@ function taskItem (item) {
 function pushTasks (item) {
     let index = projects[projectIndex];
     if (item instanceof PointerEvent) {
-        console.log('hi')
     }
     else {
     index.push(item);
@@ -100,4 +97,4 @@ function pushTasks (item) {
     tasks = [];
 }
 
-export {tasks, addTask, submitTask, pushTasks, renderTasks}
+export {addTask, submitTask, pushTasks, renderTasks}
